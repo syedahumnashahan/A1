@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #eef2ff;
+  color: #292b42;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 10% 15%, #d9e9ff 0, transparent 25%),
+    radial-gradient(circle at 90% 20%, #eadcff 0, transparent 27%),
+    radial-gradient(circle at 50% 90%, #d8f5ee 0, transparent 30%),
+    #eef2ff;
+}
+
+/* ================= HEADER ================= */
+
+.top-bar {
+  height: 82px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #dfe3f1;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-symbol {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #7c6ce0, #9b8bea);
+
+  color: white;
+  font-weight: 800;
+
+  box-shadow: 0 8px 20px #7867d833;
+}
+
+.brand-area h1 {
+  color: #292b42;
+  font: 700 18px "Space Grotesk";
+  letter-spacing: 1px;
+}
+
+.brand-area p {
+  margin-top: 3px;
+  color: #9297aa;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.system-status {
+  padding: 8px 14px;
+
+  border: 1px solid #cceee2;
+  border-radius: 20px;
+
+  color: #38967d;
+  background: #effbf7;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.status-dot {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #58c9a9;
+}
+
+/* ================= MAIN ================= */
+
+.dashboard {
+  width: 86%;
+  max-width: 1180px;
+  margin: auto;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+  min-height: 370px;
+  padding: 70px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.overline {
+  margin-bottom: 12px;
+
+  color: #7665d2;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-content h2 {
+  color: #292b42;
+
+  font: 700 clamp(42px, 6vw, 70px)/.98 "Space Grotesk";
+}
+
+.hero-content h2 span {
+  color: #7867d8;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin-top: 20px;
+
+  color: #777d92;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ================= COUNTER ================= */
+
+.task-counter {
+  width: 185px;
+  height: 185px;
+
+  display: grid;
+  place-content: center;
+
+  text-align: center;
+
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+
+  background: linear-gradient(145deg, #eeeaff, #dfe8ff);
+
+  box-shadow:
+    0 15px 35px #606b9b22,
+    inset 0 0 20px #ffffffaa;
+}
+
+.task-counter span,
+.task-counter small {
+  color: #858ba0;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.task-counter strong {
+  margin: 6px;
+
+  color: #7463d2;
+
+  font: 700 55px "Space Grotesk";
+}
+
+/* ================= ADD TASK ================= */
+
+.command-panel {
+  padding: 32px;
+
+  border: 1px solid #dfe3f0;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 15px 40px #53608b12;
+}
+
+.panel-heading h3,
+.board-heading h3 {
+  color: #292b42;
+
+  font: 700 22px "Space Grotesk";
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.input-area {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+
+  border: 1px solid #dfe3ee;
+  border-radius: 13px;
+
+  background: #f8f9ff;
+
+  transition: .2s;
+}
+
+.input-area:focus-within {
+  border-color: #a99de9;
+  box-shadow: 0 0 0 4px #a99de922;
+}
+
+.input-symbol {
+  color: #7867d8;
+  font-size: 22px;
+}
+
+.input-area input {
+  width: 100%;
+
+  padding: 15px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #292b42;
+}
+
+.input-area input::placeholder {
+  color: #a1a6b7;
+}
+
+.task-form button {
+  padding: 0 25px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: linear-gradient(135deg, #7968d9, #9585e9);
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.task-form button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px #7867d844;
+}
+
+/* ================= BOARD ================= */
+
+.task-board {
+  padding: 65px 0;
+}
+
+.board-heading {
+  margin-bottom: 28px;
+
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.board-count {
+  padding: 8px 13px;
+
+  border: 1px solid #dfe3ee;
+  border-radius: 9px;
+
+  color: #777e95;
+  background: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* ================= TASK GRID ================= */
+
+.task-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+/* ================= TASK CARD ================= */
+
+.task-card {
+  position: relative;
+
+  min-height: 235px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #dce1ef;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow: 0 12px 30px #59658b16;
+
+  transition: .25s;
+}
+
+/* TOP COLOR AREA */
+
+.task-card::before {
+  content: "";
+
+  display: block;
+
+  height: 7px;
+
+  background: linear-gradient(
+    90deg,
+    #8d7de3,
+    #a99be9,
+    #b9dff1
+  );
+}
+
+/* CARD HOVER */
+
+.task-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #c9c2ef;
+
+  box-shadow: 0 18px 40px #59658b25;
+}
+
+/* CARD HEADER */
+
+.card-header {
+  padding: 18px 22px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-id {
+  color: #8a90a5;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.active-label {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #e7f8f2;
+
+  color: #3d9b82;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* CARD BODY */
+
+.card-content {
+  padding: 12px 22px 20px;
+}
+
+.task-category {
+  display: inline-block;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  background: #f0edff;
+
+  color: #7665d2;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: .7px;
+}
+
+.card-content h3 {
+  margin-top: 14px;
+
+  color: #303248;
+
+  font: 700 19px/1.35 "Space Grotesk";
+}
+
+.card-content p {
+  margin-top: 9px;
+
+  color: #858b9e;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* CARD FOOTER */
+
+.card-footer {
+  padding: 12px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #edf0f6;
+
+  background: #fafbff;
+
+  color: #969bad;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.status-line {
+  color: #49a98c;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  min-height: 70px;
+
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #dfe3ee;
+
+  background: rgba(255, 255, 255, .8);
+
+  color: #9297aa;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 750px) {
+
+  .hero-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-counter {
+    align-self: center;
+  }
+
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-form button {
+    height: 48px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .top-bar {
+    padding: 18px 6%;
+  }
+
+  .system-status {
+    display: none;
+  }
+
+  .dashboard {
+    width: 90%;
+  }
+
+  .hero-section {
+    padding: 50px 0;
+  }
+
+  .hero-content h2 {
+    font-size: 42px;
+  }
+
+  .command-panel {
+    padding: 22px;
+  }
+
+  .board-heading,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  footer {
+    padding: 20px 6%;
+  }
+}
